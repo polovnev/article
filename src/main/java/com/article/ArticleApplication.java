@@ -21,8 +21,11 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableAutoConfiguration(exclude = FreeMarkerAutoConfiguration.class)
 public class ArticleApplication {
     
+   
+    
     public static void main(String[] args) {
         SpringApplication.run(ArticleApplication.class);
+        
     }
     
 }

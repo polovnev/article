@@ -8,6 +8,7 @@ import javax.transaction.Transactional;
 /**
  * Created by polovnev on 03.01.18.
  */
-@Transactional
-public interface UserDao extends CrudRepository<User, Long> {
+public interface UserDao{
+    
+    User getUser(long id);
 }

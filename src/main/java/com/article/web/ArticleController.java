@@ -1,4 +1,4 @@
-package com.article.controller;
+package com.article.web;
 
 /**
  * Created by polovnev on 03.01.18.
