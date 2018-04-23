@@ -1,0 +1,12 @@
+/node_modules
+/.settings
+/bin
+/.classpath
+/.project
+/.idea
+*.iml
+*.ipr
+*.iws
+*.log
+/src/main/webapp/META-INF/MANIFEST.MF
+/target
