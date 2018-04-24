@@ -1,6 +1,11 @@
 package com.article.model;
 
+import org.hibernate.annotations.*;
+import org.hibernate.annotations.Cache;
+
 import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Set;
 
 /**
@@ -8,6 +13,8 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "user")
+@Cacheable
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class User {
     
     @Id

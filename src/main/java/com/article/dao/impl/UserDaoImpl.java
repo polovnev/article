@@ -15,7 +15,7 @@ import javax.transaction.Transactional;
  */
 @Repository
 @Transactional
-public class UserDaoImpl implements UserDao{
+public class UserDaoImpl implements UserDao {
     
     @Autowired
     private EntityManager entityManager;
@@ -27,6 +27,6 @@ public class UserDaoImpl implements UserDao{
     
     @Override
     public User getUser(long id) {
-        return (User) getSession().get(User.class,id);
+        return (User) getSession().get(User.class, id);
     }
 }

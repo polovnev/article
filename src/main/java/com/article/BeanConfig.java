@@ -34,7 +34,7 @@ public class BeanConfig {
         
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
-        em.setJpaProperties(additionalProperties());
+        em.setJpaProperties(hibernateProperties());
         
         return em;
     }
@@ -63,11 +63,14 @@ public class BeanConfig {
         return new PersistenceExceptionTranslationPostProcessor();
     }
     
-    Properties additionalProperties() {
+    private Properties hibernateProperties() {
         Properties properties = new Properties();
         properties.setProperty(
                 "hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
-        
+        properties.setProperty(
+                "hibernate.cache.use_second_level_cache", "true");
+        properties.setProperty(
+                "hibernate.cache.region.factory_class", "org.hibernate.cache.ehcache.EhCacheRegionFactory");
         return properties;
     }
 }
