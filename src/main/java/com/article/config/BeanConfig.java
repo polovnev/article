@@ -1,4 +1,4 @@
-package com.article;
+package com.article.config;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;

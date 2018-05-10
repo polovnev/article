@@ -18,14 +18,9 @@ public class UserController {
     @Autowired
     private UserService userService;
     
-    @RequestMapping("/")
-    public String getMainPage() {
-        return "index.html";
-    }
-    
     @ResponseBody
     @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
-    public User getUser(@PathVariable("id") long id) {
-        return userService.getUser(id);
+    public String getUser(@PathVariable("id") long id) {
+        return userService.getUser(id).toString();
     }
 }

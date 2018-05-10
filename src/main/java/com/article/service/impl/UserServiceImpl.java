@@ -10,13 +10,13 @@ import org.springframework.stereotype.Service;
  * Created by polovnev on 03.01.18.
  */
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
     
     @Autowired
     private UserDao userDao;
     
     @Override
     public User getUser(long id) {
-        return userDao.getUser(id);
+        return (User) userDao.findById(id, null);
     }
 }
