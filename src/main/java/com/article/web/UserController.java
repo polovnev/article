@@ -1,7 +1,7 @@
 package com.article.web;
 
-import com.article.model.User;
-import com.article.service.UserService;
+import com.article.facade.UserFacade;
+import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,11 +16,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class UserController {
     
     @Autowired
-    private UserService userService;
+    private UserFacade userFacade;
     
     @ResponseBody
     @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
     public String getUser(@PathVariable("id") long id) {
-        return userService.getUser(id).toString();
+        return new Gson().toJson(userFacade.getUser(id));
+        
     }
 }
