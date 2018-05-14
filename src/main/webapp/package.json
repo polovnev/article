@@ -1,0 +1,24 @@
+{
+  "name": "npm_article",
+  "version": "1.0.0",
+  "description": "frontend implementing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "polovnev",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.0",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "angular": "^1.7.0",
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0"
+  },
+  "keywords": []
+}

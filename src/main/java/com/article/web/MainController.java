@@ -11,6 +11,6 @@ public class MainController {
     
     @RequestMapping("/")
     public String getMainPage() {
-        return "index.html";
+        return "app/index.html";
     }
 }
