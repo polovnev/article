@@ -43,9 +43,9 @@ public class BeanConfig {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://127.0.0.1:3306/article?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
-        dataSource.setUsername("root");
-        dataSource.setPassword("root");
+        dataSource.setUrl("jdbc:mysql://sql7.freemysqlhosting.net:3306/sql7237913?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
+        dataSource.setUsername("sql7237913");
+        dataSource.setPassword("lagw9FWPLs");
         return dataSource;
     }
     
